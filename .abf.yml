@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kmail-account-wizard-17.12.1.tar.xz: 044cba92a31793f683ff7d5f21d105c9bb39b54d
+sources:
+  kmail-account-wizard-17.12.2.tar.xz: da077458603cbeadee96d09979dc83b54e862ba9
