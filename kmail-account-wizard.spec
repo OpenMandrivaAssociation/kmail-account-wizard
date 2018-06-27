@@ -40,6 +40,7 @@ BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	pkgconfig(shared-mime-info)
+BuildRequires:	cmake(QGpgme)
 Provides:	accountwizard = %{EVRD}
 Conflicts:	accountwizard < 3:17.04.0
 Obsoletes:	accountwizard < 3:17.04.0
