@@ -2,7 +2,7 @@
 
 Summary:	Account wizard for KMail
 Name:		kmail-account-wizard
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -58,9 +58,9 @@ Launch the account wizard to configure PIM accounts.
 %{_bindir}/ispdb
 %dir %{_datadir}/akonadi/accountwizard/tine20/
 %{_datadir}/akonadi/accountwizard/tine20/*
-%{_sysconfdir}/xdg/accountwizard.categories
-%{_sysconfdir}/xdg/accountwizard.knsrc
-%{_sysconfdir}/xdg/accountwizard.renamecategories
+%{_datadir}/knsrcfiles/accountwizard.knsrc
+%{_datadir}/qlogging-categories5/accountwizard.categories
+%{_datadir}/qlogging-categories5/accountwizard.renamecategories
 %{_datadir}/mime/packages/accountwizard-mime.xml
 %{_qt5_plugindir}/accountwizard_plugin.so
 
