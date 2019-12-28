@@ -2,13 +2,13 @@
 
 Summary:	Account wizard for KMail
 Name:		kmail-account-wizard
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	boost-devel
 BuildRequires:	sasl-devel
