@@ -2,7 +2,7 @@
 
 Summary:	Account wizard for KMail
 Name:		kmail-account-wizard
-Version:	20.04.3
+Version:	20.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -28,7 +28,6 @@ BuildRequires:	cmake(KF5IdentityManagement)
 BuildRequires:	cmake(KF5Ldap)
 BuildRequires:	cmake(KF5MailTransportAkonadi)
 BuildRequires:	cmake(KF5PimCommon)
-BuildRequires:	cmake(KF5LibkdepimAkonadi)
 BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	cmake(KF5IMAP)
 BuildRequires:	cmake(MailTransportDBusService)
