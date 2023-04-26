@@ -1,9 +1,9 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	Account wizard for KMail
 Name:		kmail-account-wizard
 Version:	23.04.0
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -42,6 +42,7 @@ BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	cmake(QGpgme)
+BuildRequires:	cmake(Qt5Keychain)
 Provides:	accountwizard = %{EVRD}
 Conflicts:	accountwizard < 3:17.04.0
 Obsoletes:	accountwizard < 3:17.04.0
