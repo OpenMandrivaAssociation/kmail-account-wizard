@@ -2,7 +2,7 @@
 
 Summary:	Account wizard for KMail
 Name:		kmail-account-wizard
-Version:	23.04.3
+Version:	23.08.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -23,15 +23,15 @@ BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5Codecs)
 BuildRequires:	cmake(KF5Crash)
 BuildRequires:	cmake(KF5Notifications)
-BuildRequires:	cmake(KF5Akonadi)
-BuildRequires:	cmake(KF5IdentityManagement)
-BuildRequires:	cmake(KF5Ldap)
-BuildRequires:	cmake(KF5MailTransportAkonadi)
-BuildRequires:	cmake(KF5PimCommon)
+BuildRequires:	cmake(KPim5Akonadi)
+BuildRequires:	cmake(KPim5IdentityManagement)
+BuildRequires:	cmake(KPim5Ldap)
+BuildRequires:	cmake(KPim5MailTransport)
+BuildRequires:	cmake(KPim5PimCommon)
 BuildRequires:	cmake(KF5Libkleo)
-BuildRequires:	cmake(KF5IMAP)
+BuildRequires:	cmake(KPim5IMAP)
 BuildRequires:	cmake(MailTransportDBusService)
-BuildRequires:	cmake(KF5AkonadiMime)
+BuildRequires:	cmake(KPim5AkonadiMime)
 BuildRequires:	cmake(Qt5UiTools)
 BuildRequires:	cmake(KF5KrossUi)
 BuildRequires:	cmake(KF5NewStuff)
