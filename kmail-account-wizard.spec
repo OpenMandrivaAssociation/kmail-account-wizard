@@ -2,7 +2,7 @@
 
 Summary:	Account wizard for KMail
 Name:		kmail-account-wizard
-Version:	23.08.2
+Version:	23.08.3
 Release:	1
 Epoch:		3
 License:	GPLv2+
