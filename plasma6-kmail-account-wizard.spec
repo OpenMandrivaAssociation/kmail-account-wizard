@@ -24,16 +24,14 @@ BuildRequires:	cmake(KF6Codecs)
 BuildRequires:	cmake(KF6Crash)
 BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KPim6Akonadi)
-BuildRequires:	cmake(KPim6IdentityManagement)
-BuildRequires:	cmake(KPim6Ldap)
+BuildRequires:	cmake(KPim6IdentityManagementCore)
+BuildRequires:	cmake(KPim6LdapCore)
 BuildRequires:	cmake(KPim6MailTransport)
 BuildRequires:	cmake(KPim6PimCommon)
-BuildRequires:	cmake(KF6Libkleo)
+BuildRequires:	cmake(KPim6Libkleo)
 BuildRequires:	cmake(KPim6IMAP)
-BuildRequires:	cmake(MailTransportDBusService)
 BuildRequires:	cmake(KPim6AkonadiMime)
 BuildRequires:	cmake(Qt6UiTools)
-BuildRequires:	cmake(KF6KrossUi)
 BuildRequires:	cmake(KF6NewStuff)
 BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6DBus)
@@ -53,21 +51,17 @@ Conflicts:	kdepim-accountwizard < 3:17.04.0
 Launch the account wizard to configure PIM accounts.
 
 %files -f all.lang
-%{_kde6_applicationsdir}/org.kde.accountwizard.desktop
+%{_datadir}/applications/org.kde.accountwizard.desktop
 %{_bindir}/accountwizard
-%{_bindir}/ispdb
-%dir %{_datadir}/akonadi/accountwizard/tine20/
-%{_datadir}/akonadi/accountwizard/tine20/*
-%{_datadir}/knsrcfiles/accountwizard.knsrc
 %{_datadir}/qlogging-categories6/accountwizard.categories
 %{_datadir}/qlogging-categories6/accountwizard.renamecategories
-%{_datadir}/mime/packages/accountwizard-mime.xml
-%{_qt6_plugindir}/accountwizard_plugin.so
+%{_libdir}/libaccountwizard.so*
+%{_qtdir}/qml/org/kde/pim/accountwizard
 
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n kmail-account-wizard-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -78,7 +72,4 @@ Launch the account wizard to configure PIM accounts.
 %install
 %ninja_install -C build
 
-%find_lang accountwizard
-%find_lang accountwizard_tine20
-
-cat *.lang >all.lang
+%find_lang all --all-name
