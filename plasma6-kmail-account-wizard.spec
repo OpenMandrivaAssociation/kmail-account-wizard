@@ -2,9 +2,8 @@
 
 Summary:	Account wizard for KMail
 Name:		plasma6-kmail-account-wizard
-Version:	24.01.85
+Version:	24.01.90
 Release:	1
-Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -42,11 +41,6 @@ BuildRequires:	cmake(Qt6QuickControls2)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(Qt6Keychain)
-Provides:	accountwizard = %{EVRD}
-Conflicts:	accountwizard < 3:17.04.0
-Obsoletes:	accountwizard < 3:17.04.0
-Obsoletes:	kdepim-accountwizard < 3:17.04.0
-Conflicts:	kdepim-accountwizard < 3:17.04.0
 
 %description
 Launch the account wizard to configure PIM accounts.
