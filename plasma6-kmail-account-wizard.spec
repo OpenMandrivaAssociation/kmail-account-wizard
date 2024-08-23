@@ -5,7 +5,7 @@
 
 Summary:	Account wizard for KMail
 Name:		plasma6-kmail-account-wizard
-Version:	24.05.2
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -54,6 +54,7 @@ Launch the account wizard to configure PIM accounts.
 
 %files -f all.lang
 %{_datadir}/applications/org.kde.accountwizard.desktop
+%{_datadir}/metainfo/org.kde.accountwizard.appdata.xml
 %{_bindir}/accountwizard
 
 #----------------------------------------------------------------------
