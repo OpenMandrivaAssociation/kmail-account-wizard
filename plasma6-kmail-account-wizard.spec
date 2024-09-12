@@ -5,7 +5,7 @@
 
 Summary:	Account wizard for KMail
 Name:		plasma6-kmail-account-wizard
-Version:	24.08.0
+Version:	24.08.1
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
