@@ -5,7 +5,7 @@
 
 Summary:	Account wizard for KMail
 Name:		kmail-account-wizard
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -49,26 +49,15 @@ BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(Qt6Keychain)
 
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
+%rename plasma6-kmail-account-wizard
+
 %description
 Launch the account wizard to configure PIM accounts.
 
-%files -f all.lang
+%files -f %{name}.lang
 %{_datadir}/applications/org.kde.accountwizard.desktop
 %{_datadir}/metainfo/org.kde.accountwizard.appdata.xml
 %{_bindir}/accountwizard
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kmail-account-wizard-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-
-%find_lang all --all-name
