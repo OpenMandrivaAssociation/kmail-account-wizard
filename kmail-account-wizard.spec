@@ -5,7 +5,7 @@
 
 Summary:	Account wizard for KMail
 Name:		kmail-account-wizard
-Version:	26.04.3
+Version:	26.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -50,6 +50,7 @@ BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(Qt6Keychain)
 
 BuildSystem:	cmake
+BuildOption:	-DBUILD_PYTHON_BINDINGS:BOOL=OFF
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %rename plasma6-kmail-account-wizard
